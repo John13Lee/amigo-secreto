@@ -55,3 +55,13 @@ function sortearAmigo() {
 function gerarNumeroAleatorio() {
     let qtdeAmigos = (amigos.length -1);                                    //cria variável com quantidade de amigos cadastrados (o "-1" é por causa da posição ZERO no array)
     let numeroEscolhido = Math.floor(Math.random() * qtdeAmigos);           //escolhe um nº aleatório (Math.floor = parseInt)
+
+    console.log(numeroEscolhido)                                            //exibe o nº escolhido no Console
+    return numeroEscolhido;                                                 //retorna o nº escolhido (posição no array)
+}
+
+// Função para exibir o amigo sorteado
+function exibirAmigoSorteado(index) {
+    let amigoSorteado = document.getElementById('resultado');               //vincula variável ao objeto RESULTADO na tela HTML
+    amigoSorteado.innerHTML = `<li>${amigos[index]}</li>`;                  //exibe o nome correspondente à posição no array (nº aleatório)
+}
