@@ -25,3 +25,20 @@ function adicionarAmigo() {
             alert('Este nome já consta na lista');                          //avisa usuário (pop-up em tela) que o nome já consta no array
             return                                                          //sai da função
         }
+        amigos.push(novoAmigo);                                             //adiciona o novo nome no array
+        console.log(amigos);                                                //exibe o conteúdo do array no Console
+        nomeDoAmigo.value = '';                                             //limpa o campo de nome do amigo
+
+        let posicaoArray = (amigos.length -1);                              //cria variavel para controlar quantidade de nomes no array
+        const listaAmigos = document.getElementById('listaAmigos');         //vincula a variável à lista HTML
+        listaAmigos.innerHTML = '';                                         //limpa a lista HTML
+
+        while (posicaoArray >= 0) {                                         //verifica se já passou por todos os nomes no array
+            console.log(`posicaoArray = ${posicaoArray}`)                   //exibe conteúdo da variável no Console
+            const novoItem = document.createElement('li');                  //cria um novo elemento "li"
+            novoItem.textContent = amigos[posicaoArray];                    //adiciona o nome do array ao elemento "li"
+            listaAmigos.appendChild(novoItem);                              //adiciona o conteúdo do elemento "li" na lista
+            posicaoArray--;                                                 //retorna o ponteiro do array (decremento)
+        }
+    }
+}
