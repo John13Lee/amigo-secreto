@@ -13,5 +13,11 @@ Me chamo Jason Alves  !
 **Atualmente trabalho na área de Planejamento de uma industria, mas quero me desenvolver em tecnologia. 
 **Estou me aprofundando em JavaScript e estou empolgado. 
 
+## INSTRUÇÕES PARA USO DA APLICAÇÃO :
+
+![image](https://github.com/user-attachments/assets/52c6a181-83c1-4995-a7a0-cbcbf55859b6)
+
+
+
         
         
