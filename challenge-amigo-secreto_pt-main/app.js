@@ -42,3 +42,16 @@ function adicionarAmigo() {
         }
     }
 }
+
+function sortearAmigo() {
+    if (amigos.length === 0) {                                              //verifica se array está vazio
+        alert('ALERTA!!! Não há amigos cadastrados. Efetue Cadastro de amigos.');       //mensagem caso array esteja vazio
+        return;                                                             //retorna para "corrigir a falha" (cadastrar amigos)
+    }
+    let posicaoArrayAmigos = gerarNumeroAleatorio();                        //chama a geração de número aleatório (posição correspondente ao amigo sorteado)
+    exibirAmigoSorteado(posicaoArrayAmigos);                                //chama a função de exibir o nome do amigo correspondente ao número aleatório (posição no array)
+}
+
+function gerarNumeroAleatorio() {
+    let qtdeAmigos = (amigos.length -1);                                    //cria variável com quantidade de amigos cadastrados (o "-1" é por causa da posição ZERO no array)
+    let numeroEscolhido = Math.floor(Math.random() * qtdeAmigos);           //escolhe um nº aleatório (Math.floor = parseInt)
